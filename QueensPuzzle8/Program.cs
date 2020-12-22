@@ -14,7 +14,10 @@ namespace QueensPuzzle8
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            // 寫死了 0 ~ 7 如果今天需要修改的話怎麼辦 ? 
             var arr = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7 };
+            
+            // 命名 arr
             var arrs = GetArrs(arr); 
             arrs = RemoveObliqueLine(arrs);
             foreach (var ans in arrs) {
@@ -86,6 +89,7 @@ namespace QueensPuzzle8
  
             for (var i = 0; i < arr.Count(); i++) 
             {
+                // 命名
                 var a2 = arr.ToList();
                 a2.RemoveAt(i);
                 if (a2.Count() < 1)
